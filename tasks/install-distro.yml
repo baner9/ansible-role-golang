@@ -6,6 +6,7 @@
     dest: "{{ go_temporary_dir }}/{{ go_distribution_filename }}.tar.gz"
     checksum: "{{ go_checksum | default('') }}"
     validate_certs: no
+    use_proxy: "{{use_proxy}}"
 
 - name: "Go-Lang | Empty destination directory"
   file:
